@@ -1,17 +1,13 @@
-import React from 'react';
-import './App.css';
-import axios from 'axios';
-import { Button } from 'antd';
-import Login from './Pages/login';
+import React from 'react'
+import './App.css'
+import Login from './Pages/login'
 
-function App() {
-  return (
-    <div className="App">
+const App: React.FC = () => {
+  return <div className="App">
       <header className="App-header">
-        <Login></Login>
+        <Login />
       </header>
     </div>
-  );
 }
 
-export default App;
+export default App

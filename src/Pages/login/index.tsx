@@ -1,12 +1,12 @@
-import { Button } from 'antd';
+import { Button } from 'antd'
+import React from 'react'
 
-const Login = () => {
-    return <>
-        <Button onClick={() => { alert(1); }}>
+const Login: React.FC = () => {
+  return <div>
+        <Button onClick={() => { alert(1) }}>
             Login
         </Button>
-
-    </>;
+    </div>
 }
 
-export default Login;
+export default Login
