@@ -3,14 +3,20 @@ import './App.css'
 import Login from './pages/login'
 import { useTranslation } from 'react-i18next'
 import { Select } from 'antd'
+import Home from './pages/home'
 const lngs: any = {
   en: { nativeName: 'English' },
   zh: { nativeName: '中文' }
 }
 const { Option } = Select
 const App: React.FC = () => {
+  const isLogin = true
   const { i18n } = useTranslation()
-  return <div className="App">
+  return isLogin
+    ? <>
+      <Home />
+    </>
+    : <div className="App">
       <header className="App-header">
         <Select
           style={{ width: 100, position: 'absolute', right: 20, top: 20 }}
