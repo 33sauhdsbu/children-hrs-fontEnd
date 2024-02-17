@@ -4,7 +4,8 @@ import { useTranslation } from 'react-i18next'
 import './index.less'
 
 const { Item } = Form
-const Login: React.FC = () => {
+const Login: React.FC<any> = (prop) => {
+  const { loginMethod } = prop
   const [isSign, setIsSign] = useState<boolean>(false)
   const { t } = useTranslation()
   return isSign
@@ -50,7 +51,7 @@ const Login: React.FC = () => {
     <Button type='primary' style={{ width: 100, marginRight: 100, height: 50 }} onClick={() => { setIsSign(true) }}>
         {t('Sign Up')}
     </Button>
-    <Button type='primary' style={{ width: 100, height: 50 }} onClick={() => { alert(2) }}>
+    <Button type='primary' style={{ width: 100, height: 50 }} onClick={() => { loginMethod() }}>
         {t('Login')}
     </Button>
     </Card>

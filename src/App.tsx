@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import Login from './pages/login'
 import { useTranslation } from 'react-i18next'
@@ -9,8 +9,9 @@ const lngs: any = {
   zh: { nativeName: '中文' }
 }
 const { Option } = Select
+
 const App: React.FC = () => {
-  const isLogin = true
+  const [isLogin, setIsLogin] = useState<boolean>(false)
   const { i18n } = useTranslation()
   return isLogin
     ? <>
@@ -33,7 +34,7 @@ const App: React.FC = () => {
               </Option>
             ))}
         </Select>
-        <Login />
+        <Login loginMethod={() => { setIsLogin(true) }}/>
       </header>
     </div>
 }
