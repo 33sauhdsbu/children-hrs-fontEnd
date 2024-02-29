@@ -1,6 +1,5 @@
-import { Button, Layout } from 'antd'
+import { Layout } from 'antd'
 import React from 'react'
-// import { routes } from '../../router'
 const { Header, Footer, Sider, Content } = Layout
 const headerStyle: React.CSSProperties = {
   textAlign: 'right',
@@ -36,18 +35,19 @@ const layoutStyle = {
   borderRadius: 8
 }
 
-const Home: React.FC = () => {
+const About: React.FC = () => {
   return <Layout style={layoutStyle}>
   <Sider width="15%" style={siderStyle}>
-    <Button>123</Button>
+    Sider
   </Sider>
   <Layout>
     <Header style={headerStyle}>
-      儿童医院挂号系统
+    儿童医院挂号系统
+
     </Header>
     <Content style={contentStyle}>Content</Content>
     <Footer style={footerStyle}>Footer</Footer>
   </Layout>
 </Layout>
 }
-export default Home
+export default About
